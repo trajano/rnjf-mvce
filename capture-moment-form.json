@@ -1,0 +1,130 @@
+{
+    "id": "39lHKPuW5W1VVal6f4pBqq",
+    "type": "default",
+    "tags": [
+        {
+            "name": "form",
+            "value": "true"
+        },
+        {
+            "values": [
+                "Teacher",
+                "Supervisor",
+                "Director",
+                "Admin"
+            ],
+            "name": "allowed_groups"
+        }
+    ],
+    "name": "Capture a Moment",
+    "state": "INCOMPLETE",
+    "form": {
+        "form_data": {
+            "signature": "TJmTD1D2UqHlOyw3IPW6",
+            "id": "39lHKPuW5W1VVal6f4pBqq",
+            "artifacts": []
+        },
+        "json_schema": {
+            "type": "object",
+            "title": "Capture a Moment",
+            "definitions": {
+                "heading": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string"
+                        },
+                        "definition": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "required": [
+                "id",
+                "signature",
+                "moment_title",
+                "description",
+                "artifacts"
+            ],
+            "properties": {
+                "signature": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string",
+                    "title": "Description"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "artifacts": {
+                    "type": "array",
+                    "title": "Add Media",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "readOnly": true,
+                                "type": "string"
+                            },
+                            "uri": {
+                                "format": "data-url",
+                                "readOnly": true,
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "moment_title": {
+                    "type": "string",
+                    "title": "Title"
+                }
+            }
+        },
+        "ui_schema": {
+            "signature": {
+                "ui:widget": "hidden"
+            },
+            "description": {
+                "ui:widget": "textarea"
+            },
+            "ui:order": [
+                "id",
+                "signature",
+                "moment_title",
+                "description",
+                "artifacts"
+            ],
+            "id": {
+                "ui:widget": "hidden"
+            },
+            "artifacts": {
+                "ui:options": {
+                    "addable": false,
+                    "orderable": false,
+                    "removable": false
+                },
+                "ui:widget": "media",
+                "items": {
+                    "id": {
+                        "ui:widget": "hidden"
+                    },
+                    "uri": {
+                        "ui:widget": "hidden"
+                    }
+                }
+            },
+            "moment_title": {
+                "ui:widget": "textarea"
+            }
+        }
+    },
+    "program_id": "INF",
+    "site_id": "WjdLaVBWTE1HbkklM0Q",
+    "created_on": "2021-06-17T15:23:21.678673Z",
+    "due_date": null,
+    "completed_on": null,
+    "observer_id": "eQRMWzU%2BV9o%3D",
+    "observed_learner_id": "eQRMWzU%2BV9o%3D"
+}
