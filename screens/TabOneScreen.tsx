@@ -6,6 +6,7 @@ import { UIProvider } from "react-native-web-ui-components";
 import captureMomentForm from "../capture-moment-form.json";
 import Form from "react-native-web-jsonschema-form";
 import { Text, View } from "../components/Themed";
+import { useEffect } from "react";
 
 export default function TabOneScreen({
   navigation,
@@ -25,6 +26,10 @@ export default function TabOneScreen({
   const onChangeLogging = (event) => {
     console.log(event);
   };
+
+  useEffect(()=> {
+    console.log(formData);
+  }, [formData])
 
   const theme = {
     input: {
@@ -51,7 +56,7 @@ export default function TabOneScreen({
           formData={formData}
           schema={captureMomentForm.form.json_schema}
           uiSchema={captureMomentForm.form.ui_schema}
-          onChange={onChangeLogging}
+          onChange={onChangeSample}
         />
       </ThemeWrapper>
     </View>
