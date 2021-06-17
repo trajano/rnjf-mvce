@@ -24,12 +24,15 @@ export default function TabOneScreen({
 
   // intentionally does not change any state
   const onChangeLogging = (event) => {
-    console.log(event);
+    console.log({
+      ...event.params.values,
+      [event.params.name]: event.params.value,
+    });
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     console.log(formData);
-  }, [formData])
+  }, [formData]);
 
   const theme = {
     input: {
@@ -56,7 +59,7 @@ export default function TabOneScreen({
           formData={formData}
           schema={captureMomentForm.form.json_schema}
           uiSchema={captureMomentForm.form.ui_schema}
-          onChange={onChangeSample}
+          onChange={onChangeLogging}
         />
       </ThemeWrapper>
     </View>
